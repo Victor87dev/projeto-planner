@@ -1,28 +1,5 @@
 {
-  "projects": [
-    {
-      "id": "ae34",
-      "name": "Projeto 99",
-      "budget": "10000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "e42e",
-      "name": "Projeto Teste",
-      "budget": "30",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": "1",
