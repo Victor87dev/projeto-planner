@@ -24,11 +24,22 @@
     },
     {
       "id": "ea1e",
-      "name": "João Victor Sampaio Tenório",
+      "name": "João Victor Sampaio",
       "budget": "400",
       "category": {
         "id": "1",
         "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "f7f4",
+      "name": "Fatiminha",
+      "budget": "7000",
+      "category": {
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": []
