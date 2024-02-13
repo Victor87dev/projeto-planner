@@ -1,17 +1,5 @@
 {
-  "projects": [
-    {
-      "id": "b632",
-      "name": "Projeto casamento",
-      "budget": "70000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": "1",
