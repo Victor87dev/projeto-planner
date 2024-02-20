@@ -6,6 +6,7 @@ import Loading from "../layout/Loading"
 import Container from "../layout/Container"
 import ProjectForm from "../project/ProjectForm"
 import Message from "../layout/Message"
+import ServiceForm from "../service/ServiceForm"
 
 const Project = ()=>{
    
@@ -59,6 +60,10 @@ const Project = ()=>{
       setType('sucess')
     })
     .catch((err) => console.log(err))
+  }
+
+  function createService(){
+    
   }
 
   function toggleProjectForm(){
@@ -119,9 +124,11 @@ const Project = ()=>{
           </button>
           <div className={styles.project_info}>
             {showServiceForm && (
-              <div>
-                Formulário do serviço
-              </div>
+              <ServiceForm
+              handleSubmit={createService}
+              btnText="Adicionar Serviço"
+              projectData={project}
+              />
             )}
           </div>
         </div>
