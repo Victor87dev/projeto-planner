@@ -10,7 +10,7 @@ const ServiceForm = ({ handleSubmit, btnText, projectData })=>{
    const [service, setService] = useState({})
 
    function submit(e){
-     e.preventDefault
+     e.preventDefault()
      projectData.services.push(service)
      handleSubmit(projectData)
    }
