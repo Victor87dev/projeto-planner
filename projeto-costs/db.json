@@ -30,8 +30,57 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": []
+      "cost": 635,
+      "services": [
+        {
+          "name": "asdasd",
+          "cost": "100",
+          "description": "asdasd",
+          "id": "5ccc7ad0-aa1f-4573-a74a-e069b4aa8c7f"
+        },
+        {
+          "name": "asdasd2",
+          "cost": "100",
+          "description": "asdasd",
+          "id": "a65e7fb9-6119-416f-91ad-f31068abc5f9"
+        },
+        {
+          "name": "asdasd23",
+          "cost": "100",
+          "description": "asdasd",
+          "id": "8273c25a-92a0-4b67-ba34-4362a0d85b0c"
+        },
+        {
+          "name": "asdasd",
+          "cost": "50",
+          "description": "asdasd",
+          "id": "1cc9001e-5393-4223-8de7-1da818d69324"
+        },
+        {
+          "name": "asdasd11",
+          "cost": "40",
+          "description": "asdasd",
+          "id": "b6a94200-61ec-456a-aa24-efeed15884f0"
+        },
+        {
+          "name": "asdasd1101",
+          "cost": "20",
+          "description": "asdasd",
+          "id": "948e6fed-c142-4010-883b-84a3112fafbc"
+        },
+        {
+          "name": "fgjdfgjdfgjio",
+          "cost": "20",
+          "description": "12",
+          "id": "41eb88f1-3889-488b-9283-229738a626de"
+        },
+        {
+          "name": "fgjdfgjdfgjio2222",
+          "cost": "205",
+          "description": "12",
+          "id": "ca781517-53ca-457a-84e6-6ac76921cb8e"
+        }
+      ]
     }
   ],
   "categories": [
