@@ -1,28 +1,15 @@
 {
   "projects": [
     {
-      "id": "31b1",
-      "name": "Projeto Teste",
-      "budget": "5000",
+      "id": "a821",
+      "name": "alu",
+      "budget": "9000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "cost": 800,
-      "services": [
-        {
-          "name": "João Victor Sampaio",
-          "cost": "300",
-          "description": "carrinho pra viajar",
-          "id": "2f932191-9224-4e59-96ad-f23bea853926"
-        },
-        {
-          "name": "João Victor Sampaio Tenório sss",
-          "cost": "500",
-          "description": "a",
-          "id": "b833cd59-2300-45a7-ad49-231bc7ecec97"
-        }
-      ]
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
