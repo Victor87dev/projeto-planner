@@ -45,12 +45,6 @@ const Project = ()=>{
 
     setMessage('')
 
-    if(project.budget < project.cost){
-      setMessage('O orçamento não pode ser menor que o custo do projeto!')
-      setType('error')
-      return false
-    }
-
     fetch(`http://localhost:5000/projects/${project.id}`,{
       method: 'PATCH',
       headers: {
@@ -60,6 +54,11 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data)=>{
+      if(project.budget < project.cost){
+        setMessage('O orçamento não pode ser menor que o custo do projeto!')
+        setType('error')
+        return false
+      }
       setProject(data)
       setShowProjectForm(false)
       setMessage('Projeto atualizado!')
@@ -72,8 +71,6 @@ const Project = ()=>{
     setMessage('')
     // last service
 
-    
-
     const lastService = project.services[project.services.length - 1]
 
     lastService.id = uuidv4()
@@ -82,19 +79,9 @@ const Project = ()=>{
 
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
 
-    // maximum value validation
+    
 
-    if(newCost > parseFloat(project.budget)){
-      setMessage('Orçamento ultrapassado, verifique o valor do serviço')
-      setType('error')
-      project.services.pop()
-      return false
-    }
-
-    // add service cost to project total cost
-
-    project.cost = newCost
-
+ 
     // update project
 
     fetch(`http://localhost:5000/projects/${project.id}`,{
@@ -106,10 +93,21 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data) => {
+      // maximum value validation
+
+    if(newCost > parseFloat(project.budget)){
+      setMessage('Orçamento ultrapassado, verifique o valor do serviço')
+      setType('error')
+      project.services.pop()
+      return false
+    }
+       // add service cost to project total cost
+
+       project.cost = newCost
+
       setShowServiceForm(false)
     })
     .catch(err => console.log(err))
-
   }
 
   function removeService(id, cost){
