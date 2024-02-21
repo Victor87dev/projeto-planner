@@ -16,7 +16,7 @@ const Projects = ()=>{
 
   const location = useLocation()
   let message = ''
-  if(location.state){
+  if(location.state && projects.length > 0){
     message = location.state.message
   }
 
@@ -39,6 +39,9 @@ const Projects = ()=>{
   }, [])
 
   function removeProject(id){
+
+    setProjectMessage('')
+
     fetch(`http://localhost:5000/projects/${id}`,{
         method: 'DELETE',
         headers: {
