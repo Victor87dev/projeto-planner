@@ -1,20 +1,20 @@
 {
   "projects": [
     {
-      "id": "cef5",
-      "name": "Projeto casamento",
-      "budget": "60000",
+      "id": "db82",
+      "name": "asd",
+      "budget": "2000",
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "1",
+        "name": "Infra"
       },
-      "cost": 8000,
+      "cost": 0,
       "services": [
         {
-          "name": "Musica ao vivo",
-          "cost": "8000",
-          "description": "Banda",
-          "id": "a0be5f1c-ed3f-4cfd-8742-dbd9fe1a7a21"
+          "name": "adassda",
+          "cost": "300",
+          "description": "asd",
+          "id": "a9bb0c94-e698-4327-9afa-3b32b47fe62c"
         }
       ]
     }
