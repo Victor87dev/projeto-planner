@@ -4,6 +4,7 @@
     border-radius: 5px;
     width: 24%;
     margin: 0.5%;
+    box-shadow: rgb(0, 0, 0) 0px 1px 8px;
 }
 
 .project_card h4{

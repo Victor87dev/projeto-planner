@@ -1,15 +1,22 @@
 {
   "projects": [
     {
-      "id": "ca8c",
-      "name": "don nada",
-      "budget": "7000",
+      "id": "cef5",
+      "name": "Projeto casamento",
+      "budget": "60000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "cost": 0,
-      "services": []
+      "cost": 8000,
+      "services": [
+        {
+          "name": "Musica ao vivo",
+          "cost": "8000",
+          "description": "Banda",
+          "id": "a0be5f1c-ed3f-4cfd-8742-dbd9fe1a7a21"
+        }
+      ]
     }
   ],
   "categories": [
