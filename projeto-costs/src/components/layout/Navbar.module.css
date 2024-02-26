@@ -1,8 +1,9 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #b3b3b3;
     padding: 1em;
+    border-bottom: 4px solid #d8940b;
 }
 
 .nav{
@@ -18,18 +19,27 @@
 
 .item{
     margin-right: 1em;
+    
 }
 
 .item a {
     color: #000000;
     text-decoration: none;
+    transition: 0.8s;
+    border-radius: 8px;
+    padding: 6px;
+    font-weight: bold;
 }
 
 .item a:hover{
-  color: #FFBB33;
+  background-color: #000000;
+  color: #d8940b;
+  font-weight: bold;
 }
 
 .img_item{
-    width: 100px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    border-radius: 50px;
 }
