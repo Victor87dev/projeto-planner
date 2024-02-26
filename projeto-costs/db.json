@@ -1,22 +1,15 @@
 {
   "projects": [
     {
-      "id": "db82",
+      "id": "f36f",
       "name": "asd",
-      "budget": "2000",
+      "budget": "4000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
-      "services": [
-        {
-          "name": "adassda",
-          "cost": "300",
-          "description": "asd",
-          "id": "a9bb0c94-e698-4327-9afa-3b32b47fe62c"
-        }
-      ]
+      "services": []
     }
   ],
   "categories": [

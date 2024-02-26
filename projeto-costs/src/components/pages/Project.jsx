@@ -103,9 +103,6 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data) => {
-     
-
-      console.log("habla")
 
       setShowServiceForm(false)
     })

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import Container from "./Container";
-import Logo from "../../img/costs_logo.png"
+import Logo from "../../img/money_0.png"
 import Styles from "./Navbar.module.css"
 
 const Navbar = ()=>{
@@ -9,7 +9,7 @@ const Navbar = ()=>{
       
       <nav className={Styles.navbar}>
         <Container>
-            <Link to="/"><img src={Logo} alt="Costs" /></Link>
+            <Link to="/"><img className={Styles.img_item} src={Logo} alt="Costs" /></Link>
             <ul className={Styles.list}>
                 <li className={Styles.item}>
                   <Link to="/">Home</Link>

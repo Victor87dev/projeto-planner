@@ -16,7 +16,7 @@ const Footer = ()=>{
              <FaLinkedin/>
             </li>  
         </ul>
-        <p className={Styles.copy_right}><span>Costs</span> &copy; 2024</p>
+        <p className={Styles.copy_right}><span>Planner</span> &copy; 2024</p>
     </footer>
   )
 }
