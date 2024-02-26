@@ -12,7 +12,7 @@ html, body, #root{
 
 ::-webkit-scrollbar{
   width: 15px;
-  background: #ffffff;
+  background: #b9b9b9;
 }
 
 ::-webkit-scrollbar-thumb{
