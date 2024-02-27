@@ -1,5 +1,5 @@
 .footer{
-    background-color: #f1f1f1;
+    background-color: #222;
     color: #000000;
     padding: 3em;
     text-align: center;
@@ -23,18 +23,22 @@
 .social_list svg{
     font-size: 1.5em;
     cursor: pointer;
+    color: #fff;
+    transition: .3s;
+}
+
+.social_list svg:hover{
+    color: #d8940b;
 }
 
 .copy_right{
     margin-top: 2em;
+    color: #fff;
 }
 
 .copy_right span{
     font-weight: bold;
     color: #d8940b;
-    background-color: #000;
-    border-radius: 5px;
-    padding: 1px;
 }
 
 
