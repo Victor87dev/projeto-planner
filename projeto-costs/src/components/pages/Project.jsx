@@ -79,14 +79,7 @@ const Project = ()=>{
 
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
 
-    // maximum value validation
-
-    if(newCost > parseFloat(project.budget)){
-      setMessage('Orçamento ultrapassado, verifique o valor do serviço')
-      setType('error')
-      project.services.pop()
-      return false
-    }
+    
        // add service cost to project total cost
 
        project.cost = newCost
@@ -103,7 +96,15 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data) => {
+    // maximum value validation
 
+    if(newCost > parseFloat(project.budget)){
+      project.cost = parseFloat(project.cost) - parseFloat(lastServiceCost)
+      setMessage('Orçamento ultrapassado, verifique o valor do serviço')
+      setType('error')
+      project.services.pop()
+      return false
+    }
       setShowServiceForm(false)
     })
     .catch(err => console.log(err))
