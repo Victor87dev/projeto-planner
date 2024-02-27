@@ -1,15 +1,28 @@
 {
   "projects": [
     {
-      "id": "f36f",
+      "id": "9716",
       "name": "asd",
-      "budget": "4000",
+      "budget": "3000",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "1",
+        "name": "Infra"
       },
-      "cost": 0,
-      "services": []
+      "cost": 6000,
+      "services": [
+        {
+          "name": "asdasdasd",
+          "cost": "3000",
+          "description": "asd",
+          "id": "226a38f3-c124-442c-8306-936204d90745"
+        },
+        {
+          "name": "asdad",
+          "cost": "3000",
+          "description": "asd",
+          "id": "4548aa32-d1ed-4a80-8aa5-677859368f12"
+        }
+      ]
     }
   ],
   "categories": [

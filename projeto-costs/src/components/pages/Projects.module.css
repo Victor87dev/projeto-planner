@@ -7,3 +7,8 @@
     justify-content: space-between;
     margin-bottom: 2em;
 }
+
+.title{
+    color: #000000;
+    letter-spacing: 2px;
+}
