@@ -1,7 +1,7 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: #f1f1f1;
+    background-color: #222;
     padding: 1em;
     border-bottom: 3px solid #d8940b;
 }
@@ -23,23 +23,24 @@
 }
 
 .item a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     transition: 0.8s;
     border-radius: 8px;
     padding: 6px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .item a:hover{
-  background-color: #000000;
-  color: #d8940b;
-  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .img_item{
     width: 80px;
     height: 80px;
-    background-color: #000000;
+    background-color: #ffffff;
     border-radius: 50px;
+    border: 2px solid #d8940b;
 }
