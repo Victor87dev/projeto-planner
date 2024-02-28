@@ -5,6 +5,7 @@
     width: 24%;
     margin: 0.5%;
     box-shadow: #d8940b 0px 1px 8px;
+    background-color: #fff;
 }
 
 .project_card h4{
@@ -65,7 +66,7 @@
 .project_card_actions button{
     text-decoration: none;
     border: none;
-    background-color: #fff;
+    background-color: #efefef;
     color: #222;
     font-size: .9em;
     padding: .6em 1em;
