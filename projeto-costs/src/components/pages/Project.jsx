@@ -78,13 +78,14 @@ const Project = ()=>{
     const lastServiceCost = lastService.cost
 
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
-
-    
+    // maximum value validation
+    if(newCost > parseFloat(project.budget)){
+      project.services.pop()
+    }else{
        // add service cost to project total cost
+      project.cost = newCost
+    }
 
-       project.cost = newCost
-
- 
     // update project
 
     fetch(`http://localhost:5000/projects/${project.id}`,{
@@ -96,13 +97,10 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data) => {
-    // maximum value validation
-
-    if(newCost > parseFloat(project.budget)){
-      project.cost = parseFloat(project.cost) - parseFloat(lastServiceCost)
+  
+   if(newCost > parseFloat(project.budget)){
       setMessage('Orçamento ultrapassado, verifique o valor do serviço')
       setType('error')
-      project.services.pop()
       return false
     }
       setShowServiceForm(false)
