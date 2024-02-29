@@ -11,3 +11,11 @@
     color: #d8940b;
 }
 
+@media screen and (max-width: 750px){
+    .btn{   
+        width: 120px;
+        font-size: 14px;
+    }
+}
+
+
