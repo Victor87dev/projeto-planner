@@ -60,6 +60,7 @@
 
     .nav__toggler{
         display: block;
+        align-self: center;
     }
 
     .nav{
@@ -80,8 +81,6 @@
     .nav .item{
         margin-bottom: 65px;
     }
-
-
 }
 
 .nav__active{
