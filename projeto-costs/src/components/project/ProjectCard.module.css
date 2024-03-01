@@ -90,4 +90,81 @@
     color: #ffbb33;
 }
 
+@media screen and (max-width: 1200px){
+  .project_card {
+    width: 30%;
+}
+}
+
+@media screen and (max-width: 950px){
+  .project_card {
+    width: 36%;
+}
+}
+
+@media screen and (max-width: 780px){
+  .project_card {
+    width: 46%;
+}
+.project_card_actions a,
+.project_card_actions button{
+    padding: .6em 1em;
+    font-size: .8em;
+}
+.project_card_actions{
+  margin-left: -8px;
+}
+}
+
+@media screen and (max-width: 590px){
+.project_card_actions a,
+.project_card_actions button{
+    padding: .6em 1em;
+    font-size: .6em;
+}
+}
+
+@media screen and (max-width: 500px){
+  .project_card {
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+.project_card_actions a,
+.project_card_actions button{
+    padding: .6em 1em;
+    font-size: .7em;
+}
+
+}
+
+@media screen and (max-width: 400px){
+  .project_card {
+    width: 70%;
+}
+
+.project_card_actions{
+  margin-left: 0px;
+}
+
+}
+
+@media screen and (max-width: 350px){
+  .project_card {
+    width: 80%;
+}
+
+.project_card_actions{
+  margin-left: -3px;
+}
+
+}
+
+@media screen and (max-width: 315px){
+.project_card_actions{
+  margin-left: -8px;
+}
+
+}
+
 
