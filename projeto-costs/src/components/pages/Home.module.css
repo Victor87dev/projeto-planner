@@ -29,3 +29,22 @@
     width: 350px;
     margin: 2em 0;
 }
+
+@media screen and (max-width: 550px){
+    .home_container h1{
+        font-size: 1.5em;
+        
+    }
+    
+    .home_container h1 span{
+        font-size: 1em;
+    }
+
+    .home_container img{
+        width: 250px;
+    }
+
+    .home_container{
+        padding: 2em;
+    }
+}
