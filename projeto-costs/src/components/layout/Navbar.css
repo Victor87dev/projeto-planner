@@ -64,15 +64,23 @@
 
     .nav{
         position: fixed;
-        top: 7vh;
+        top: 9vh;
         right: 0;
-        width: 50%;
-        height: 93vh;
+        width: 100%;
+        height: 35vh;
         background-color: #222;
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease-in;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
     }
+
+    .nav .item{
+        margin-bottom: 65px;
+    }
+
 
 }
 

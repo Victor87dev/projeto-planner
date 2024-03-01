@@ -12,9 +12,28 @@
 
 .start{
     justify-content: flex-start;
+    border: 1px solid red;
 }
 
 .column {
     flex-direction: column;
     justify-content: flex-start;
+}
+
+@media screen and (max-width: 1380px){
+    .container{
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1170px){
+    .container{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .container{
+        width: 600px;
+    }
 }
