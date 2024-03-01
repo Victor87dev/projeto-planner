@@ -20,7 +20,7 @@ function Navbar() {
 
     return(
       <nav className="navbar">
-        <Container>
+        <Container customClass="space">
             <Link to="/"><img className="img_item" src={Logo} alt="Costs" /></Link>
             <ul className={active}>
                 <li className="item">
