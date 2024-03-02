@@ -22,7 +22,7 @@ const Projects = ()=>{
 
   useEffect(()=>{
     setTimeout(()=>{
-      fetch('http://localhost:5000/projects',{
+      fetch('https://db-json-server-five.vercel.app/projects',{
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const Projects = ()=>{
 
     setProjectMessage('')
 
-    fetch(`http://localhost:5000/projects/${id}`,{
+    fetch(`https://db-json-server-five.vercel.app/projects/${id}`,{
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
