@@ -24,7 +24,6 @@ const Project = ()=>{
 
   useEffect(()=>{
     setTimeout(()=>{
-    https://db-json-server-five.vercel.app/projects
       fetch(`https://db-json-server-five.vercel.app/projects/${id}`,{
          method: 'GET',
          headers: {
