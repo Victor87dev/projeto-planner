@@ -129,13 +129,13 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data) => {
-      setProject(projectUpdated)
-      setServices(servicesUpdated)
-      setMessage('Serviço removido com suceeso!')
-      setType('sucess')
+      
     })
     .catch(err => console.log(err))
-
+    setProject(projectUpdated)
+    setServices(servicesUpdated)
+    setMessage('Serviço removido com suceeso!')
+    setType('sucess')
   }
 
   function toggleProjectForm(){
