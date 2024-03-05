@@ -83,6 +83,13 @@
     }
 }
 
+@media screen and (max-width: 431px){
+
+    .nav{
+        top: 11vh;
+    }
+}
+
 @media screen and (max-width: 400px){
    
     .img_item{
@@ -99,7 +106,14 @@
     }
 
     .nav{
-        top: 8vh;
+        top: 9vh;
+    }
+}
+
+@media screen and (max-width: 389px){
+
+    .nav{
+        top: 11vh;
     }
 }
 
