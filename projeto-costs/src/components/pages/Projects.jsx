@@ -34,6 +34,7 @@ const Projects = ()=>{
           setRemoveLoading(true)
         })
         .catch((err)=>console.log(err))
+        
     }, 300)
    
   }, [])
@@ -50,10 +51,12 @@ const Projects = ()=>{
         })
         .then((resp)=>resp.json())
         .then(() => {
-          setProjects(projects.filter((project) => project.id !== id))
-          setProjectMessage('Projeto removido com sucesso!')
+          
         })
         .catch((err)=>console.log(err))
+        setProjects(projects.filter((project) => project.id !== id))
+          setProjectMessage('Projeto removido com sucesso!')
+        
   }
 
   return(

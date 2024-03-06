@@ -33,7 +33,7 @@ const Project = ()=>{
       .then((resp)=>resp.json())
       .then((data) => {
         setProject(data)
-        setServices(data.services)
+      setServices(data.services)
       })
       .catch((err)=>console.log(err))
       
@@ -64,6 +64,7 @@ const Project = ()=>{
       setType('sucess')
     })
     .catch((err) => console.log(err))
+    
   }
 
   function createService(project){
@@ -96,15 +97,16 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data) => {
-  
-   if(newCost > parseFloat(project.budget)){
-      setMessage('Orçamento ultrapassado, verifique o valor do serviço')
-      setType('error')
-      return false
-    }
-      setShowServiceForm(false)
+      if(newCost > parseFloat(project.budget)){
+        setMessage('Orçamento ultrapassado, verifique o valor do serviço')
+        setType('error')
+        return false
+      }
+        setShowServiceForm(false)
+   
     })
     .catch(err => console.log(err))
+   
   }
 
   function removeService(id, cost){
@@ -129,12 +131,13 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data) => {
-    setProject(projectUpdated)
-    setServices(servicesUpdated)
-    setMessage('Serviço removido com suceeso!')
-    setType('sucess')
+      setProject(projectUpdated)
+      setServices(servicesUpdated)
+      setMessage('Serviço removido com suceeso!')
+      setType('sucess')
     })
     .catch(err => console.log(err))
+    
     
   }
 
