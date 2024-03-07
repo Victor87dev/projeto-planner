@@ -53,14 +53,14 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data)=>{
-      
+      if(project.budget < project.cost){
+        setMessage('O orçamento não pode ser menor que o custo do projeto!')
+        setType('error')
+        return false
+      }
     })
     .catch((err) => console.log(err))
-    if(project.budget < project.cost){
-      setMessage('O orçamento não pode ser menor que o custo do projeto!')
-      setType('error')
-      return false
-    }
+   
     setProject(data)
     setShowProjectForm(false)
     setMessage('Projeto atualizado!')
