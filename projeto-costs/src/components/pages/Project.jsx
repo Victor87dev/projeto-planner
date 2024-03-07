@@ -53,19 +53,19 @@ const Project = ()=>{
     })
     .then((resp) => resp.json())
     .then((data)=>{
-      if(project.budget < project.cost){
-        console.log("hello")
-        setMessage('O orçamento não pode ser menor que o custo do projeto!')
-        setType('error')
-        return false
-      }
-      setProject(data)
-    setShowProjectForm(false)
-    setMessage('Projeto atualizado!')
-    setType('sucess')
+      console.log('aaaa')
     })
     .catch((err) => console.log(err))
-   
+    if(project.budget < project.cost){
+      console.log("hello")
+      setMessage('O orçamento não pode ser menor que o custo do projeto!')
+      setType('error')
+      return false
+    }
+    setProject(data)
+  setShowProjectForm(false)
+  setMessage('Projeto atualizado!')
+  setType('sucess')
     
   }
 
