@@ -54,17 +54,19 @@ const Project = ()=>{
     .then((resp) => resp.json())
     .then((data)=>{
       if(project.budget < project.cost){
+        console.log("hello")
         setMessage('O orçamento não pode ser menor que o custo do projeto!')
         setType('error')
         return false
       }
-    })
-    .catch((err) => console.log(err))
-   
-    setProject(data)
+      setProject(data)
     setShowProjectForm(false)
     setMessage('Projeto atualizado!')
     setType('sucess')
+    })
+    .catch((err) => console.log(err))
+   
+    
   }
 
   function createService(project){
