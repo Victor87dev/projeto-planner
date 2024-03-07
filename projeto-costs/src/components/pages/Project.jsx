@@ -32,7 +32,7 @@ const Project = ()=>{
       })
       .then((resp)=>resp.json())
       .then((data) => {
-        setProject(data)
+      setProject(data)
       setServices(data.services)
       })
       .catch((err)=>console.log(err))
@@ -44,6 +44,18 @@ const Project = ()=>{
 
     setMessage('')
 
+    console.log(project.budget)
+
+    if(project.budget < project.cost){
+      setMessage('O orçamento não pode ser menor que o custo do projeto!')
+      setType('error')
+      return false
+    }else{
+      setShowProjectForm(false)
+      setMessage('Projeto atualizado!, atualize a página para visualizar as novas configurações.')
+      setType('sucess')
+    }
+  
     fetch(`https://db-json-server-five.vercel.app/projects/${project.id}`,{
       method: 'PATCH',
       headers: {
@@ -51,21 +63,7 @@ const Project = ()=>{
       },
       body: JSON.stringify(project),
     })
-    .then((resp) => resp.json())
-    .then((data)=>{
-      console.log('aaaa')
-    })
     .catch((err) => console.log(err))
-    if(project.budget < project.cost){
-      console.log("hello")
-      setMessage('O orçamento não pode ser menor que o custo do projeto!')
-      setType('error')
-      return false
-    }
-    setProject(data)
-  setShowProjectForm(false)
-  setMessage('Projeto atualizado!')
-  setType('sucess')
     
   }
 
@@ -83,8 +81,12 @@ const Project = ()=>{
     // maximum value validation
     if(newCost > parseFloat(project.budget)){
       project.services.pop()
+      setMessage('Orçamento ultrapassado, verifique o valor do serviço')
+      setType('error')
+      return false
     }else{
        // add service cost to project total cost
+       setShowServiceForm(false)
       project.cost = newCost
     }
 
@@ -96,16 +98,6 @@ const Project = ()=>{
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(project)
-    })
-    .then((resp) => resp.json())
-    .then((data) => {
-      if(newCost > parseFloat(project.budget)){
-        setMessage('Orçamento ultrapassado, verifique o valor do serviço')
-        setType('error')
-        return false
-      }
-        setShowServiceForm(false)
-   
     })
     .catch(err => console.log(err))
    
@@ -131,13 +123,11 @@ const Project = ()=>{
       },
       body: JSON.stringify(projectUpdated)
     })
-    .then((resp) => resp.json())
-    .then((data) => {
       setProject(projectUpdated)
       setServices(servicesUpdated)
       setMessage('Serviço removido com suceeso!')
       setType('sucess')
-    })
+
     .catch(err => console.log(err))
     
     
@@ -183,7 +173,7 @@ const Project = ()=>{
             : 
             (
               <div className={styles.project_info}>
-                <ProjectForm handleSubmit={editPost} btnText="Concluir edição" projectData={project} />
+                <ProjectForm handleSubmit={editPost} btnText="Concluir edição" projectData={project}/>
               </div>
             )
             }
