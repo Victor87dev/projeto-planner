@@ -44,26 +44,27 @@ const Project = ()=>{
 
     setMessage('')
 
-    console.log(project.budget)
+    console.log(project)
 
     if(project.budget < project.cost){
       setMessage('O orçamento não pode ser menor que o custo do projeto!')
       setType('error')
       return false
     }else{
+      fetch(`https://db-json-server-five.vercel.app/projects/${project.id}`,{
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(project),
+      })
+      .catch((err) => console.log(err))
       setShowProjectForm(false)
-      setMessage('Projeto atualizado!, atualize a página para visualizar as novas configurações.')
+      setMessage('Projeto atualizado!, atualize a página para receber os novos dados.')
       setType('sucess')
     }
   
-    fetch(`https://db-json-server-five.vercel.app/projects/${project.id}`,{
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(project),
-    })
-    .catch((err) => console.log(err))
+   
     
   }
 
