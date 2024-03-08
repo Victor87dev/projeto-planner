@@ -12,7 +12,7 @@ const NewProject = ()=>{
       project.cost = 0
       project.services = []
 
-      fetch('https://db-json-server-five.vercel.app/projects',{
+      fetch('https://db-json-server-dusky.vercel.app/projects',{
       method: "POST",
       headers: {
       'Content-type': 'application/json',
@@ -22,8 +22,6 @@ const NewProject = ()=>{
       .then((resp) => resp.json())
       .then((data) => {
        console.log(data)
-       
-       
        
       })
       .catch((err) => console.log(err))

@@ -39,6 +39,7 @@
     max-height: 40px;
     border: none;
     border-radius: 3px;
+    border: 1px solid #d8940b;
 }
 
 .btn:hover{

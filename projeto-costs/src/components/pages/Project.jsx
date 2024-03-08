@@ -24,7 +24,7 @@ const Project = ()=>{
 
   useEffect(()=>{
     setTimeout(()=>{
-      fetch(`https://db-json-server-five.vercel.app/projects/${id}`,{
+      fetch(`https://db-json-server-dusky.vercel.app/projects/${id}`,{
          method: 'GET',
          headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const Project = ()=>{
       setType('error')
       return false
     }else{
-      fetch(`https://db-json-server-five.vercel.app/projects/${project.id}`,{
+      fetch(`https://db-json-server-dusky.vercel.app/projects/${project.id}`,{
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const Project = ()=>{
 
     // update project
 
-    fetch(`https://db-json-server-five.vercel.app/projects/${project.id}`,{
+    fetch(`https://db-json-server-dusky.vercel.app/projects/${project.id}`,{
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const Project = ()=>{
     projectUpdated.services = servicesUpdated
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
 
-    fetch(`https://db-json-server-five.vercel.app/projects/${projectUpdated.id}`,{
+    fetch(`https://db-json-server-dusky.vercel.app/projects/${projectUpdated.id}`,{
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
