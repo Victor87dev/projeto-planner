@@ -4,6 +4,7 @@ import styles from "./Project.module.css"
 
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 import Loading from "../layout/Loading"
 import Container from "../layout/Container"
@@ -11,6 +12,7 @@ import ProjectForm from "../project/ProjectForm"
 import Message from "../layout/Message"
 import ServiceForm from "../service/ServiceForm"
 import ServiceCard from "../service/ServiceCard"
+
 
 const Project = ()=>{
 
@@ -21,6 +23,8 @@ const Project = ()=>{
   const [showServiceForm, setShowServiceForm] = useState(false)
   const [message, setMessage] = useState()
   const [type, setType] = useState()
+
+  const navigate = useNavigate()
 
   useEffect(()=>{
     setTimeout(()=>{
@@ -59,12 +63,19 @@ const Project = ()=>{
         body: JSON.stringify(project),
       })
       .catch((err) => console.log(err))
+      
       setShowProjectForm(false)
-      setMessage('Projeto atualizado!, atualize a página para receber os novos dados.')
+      setMessage('Projeto atualizado!.')
       setType('sucess')
+
+      setTimeout(()=>{
+        navigate(`/project/${window.location.reload()}`)
+      }, 1800)
+      
     }
   
-   
+    
+    
     
   }
 
