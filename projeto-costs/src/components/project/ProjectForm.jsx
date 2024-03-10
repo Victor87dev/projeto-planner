@@ -10,7 +10,7 @@ const ProjectForm = ({ handleSubmit, btnText, projectData })=>{
   const [project, setProject] = useState(projectData || {})
 
   useEffect(()=>{
-    fetch("https://db-json-server-dusky.vercel.app/categories",{
+    fetch("https://db-json-server-tau.vercel.app/categories",{
      method: "GET",
      headers: {
       'Content-Type': 'application/json'

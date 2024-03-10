@@ -28,7 +28,7 @@ const Project = ()=>{
 
   useEffect(()=>{
     setTimeout(()=>{
-      fetch(`https://db-json-server-dusky.vercel.app/projects/${id}`,{
+      fetch(`https://db-json-server-tau.vercel.app/projects/${id}`,{
          method: 'GET',
          headers: {
           'Content-Type': 'application/json',
@@ -53,9 +53,14 @@ const Project = ()=>{
     if(project.budget < project.cost){
       setMessage('O orçamento não pode ser menor que o custo do projeto!')
       setType('error')
+
+      setTimeout(()=>{
+        setMessage('')
+      }, 1800)
+      
       return false
     }else{
-      fetch(`https://db-json-server-dusky.vercel.app/projects/${project.id}`,{
+      fetch(`https://db-json-server-tau.vercel.app/projects/${project.id}`,{
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +70,7 @@ const Project = ()=>{
       .catch((err) => console.log(err))
       
       setShowProjectForm(false)
-      setMessage('Projeto atualizado!.')
+      setMessage('Seu projeto será atualizado em instantes!')
       setType('sucess')
 
       setTimeout(()=>{
@@ -95,6 +100,11 @@ const Project = ()=>{
       project.services.pop()
       setMessage('Orçamento ultrapassado, verifique o valor do serviço')
       setType('error')
+
+      setTimeout(()=>{
+        setMessage('')
+      }, 1800)
+
       return false
     }else{
        // add service cost to project total cost
@@ -104,7 +114,7 @@ const Project = ()=>{
 
     // update project
 
-    fetch(`https://db-json-server-dusky.vercel.app/projects/${project.id}`,{
+    fetch(`https://db-json-server-tau.vercel.app/projects/${project.id}`,{
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -128,7 +138,7 @@ const Project = ()=>{
     projectUpdated.services = servicesUpdated
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
 
-    fetch(`https://db-json-server-dusky.vercel.app/projects/${projectUpdated.id}`,{
+    fetch(`https://db-json-server-tau.vercel.app/projects/${projectUpdated.id}`,{
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -139,6 +149,10 @@ const Project = ()=>{
       setServices(servicesUpdated)
       setMessage('Serviço removido com suceeso!')
       setType('sucess')
+
+      setTimeout(()=>{
+        setMessage('')
+      }, 1800)
 
     .catch(err => console.log(err))
     

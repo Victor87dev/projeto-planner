@@ -22,7 +22,7 @@ const Projects = ()=>{
 
   useEffect(()=>{
     setTimeout(()=>{
-      fetch('https://db-json-server-dusky.vercel.app/projects',{
+      fetch('https://db-json-server-tau.vercel.app/projects',{
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const Projects = ()=>{
 
     setProjectMessage('')
 
-    fetch(`https://db-json-server-dusky.vercel.app/projects/${id}`,{
+    fetch(`https://db-json-server-tau.vercel.app/projects/${id}`,{
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -55,8 +55,11 @@ const Projects = ()=>{
         })
         .catch((err)=>console.log(err))
         setProjects(projects.filter((project) => project.id !== id))
-          setProjectMessage('Projeto removido com sucesso!')
-        
+        setProjectMessage('Projeto removido com sucesso!')
+
+        setTimeout(()=>{
+          setProjectMessage('')
+        }, 1800)
   }
 
   return(
