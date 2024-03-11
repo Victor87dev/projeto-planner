@@ -22,7 +22,7 @@ const Projects = ()=>{
 
   useEffect(()=>{
     setTimeout(()=>{
-      fetch('https://db-json-server-tau.vercel.app/projects',{
+      fetch('https://db-json-server-six.vercel.app/projects',{
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const Projects = ()=>{
 
     setProjectMessage('')
 
-    fetch(`https://db-json-server-tau.vercel.app/projects/${id}`,{
+    fetch(`https://db-json-server-six.vercel.app/projects/${id}`,{
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ const NewProject = ()=>{
       project.cost = 0
       project.services = []
 
-      fetch('https://db-json-server-tau.vercel.app/projects',{
+      fetch('https://db-json-server-six.vercel.app/projects',{
       method: "POST",
       headers: {
       'Content-type': 'application/json',
