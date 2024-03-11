@@ -90,6 +90,10 @@
     color: #ffbb33;
 }
 
+.color_yellow{
+  color: #d39210;
+}
+
 @media screen and (max-width: 1200px){
   .project_card {
     width: 30%;
