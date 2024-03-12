@@ -28,7 +28,7 @@ const NewProject = ()=>{
       // redirect
       navigate('/projects', { state: { message: 'Projeto criado com sucesso!' } })
     }
-
+    
     return (
         <div className={styles.newproject_container}>
             <h1>Criar Projeto</h1>
