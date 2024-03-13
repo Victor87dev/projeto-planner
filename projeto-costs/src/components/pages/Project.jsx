@@ -107,6 +107,12 @@ const Project = ()=>{
        // add service cost to project total cost
        setShowServiceForm(false)
       project.cost = newCost
+      setMessage('Serviço criado com sucesso!')
+      setType('sucess')
+
+      setTimeout(()=>{
+        setMessage('')
+      }, 1800)
     }
 
     // update project
