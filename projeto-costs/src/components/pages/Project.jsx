@@ -79,9 +79,6 @@ const Project = ()=>{
       
     }
   
-    
-    
-    
   }
 
   function createService(project){

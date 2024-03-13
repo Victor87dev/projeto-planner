@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NewProject.module.css"
 import ProjectForm from "../project/ProjectForm";
+import Message from "../layout/Message";
 import { useNavigate } from "react-router-dom"
 
 const NewProject = ()=>{
@@ -22,7 +23,6 @@ const NewProject = ()=>{
       .then((resp) => resp.json())
       .then((data) => {
        console.log(data)
-       
       })
       .catch((err) => console.log(err))
       // redirect
